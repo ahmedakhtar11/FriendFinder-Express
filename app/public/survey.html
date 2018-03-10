@@ -177,7 +177,7 @@
         <br><br>
         <br><br>
         <!-- Modal -->
-        <div id="resultsModal" class="modal fade" role="dialog">
+        <div id="mainModal" class="modal fade" role="dialog">
             <div class="modal-dialog">
 
                 <!-- Modal content-->
@@ -187,8 +187,8 @@
                         <h2 class="modal-title"><strong>Your New Friend!</strong></h2>
                     </div>
                     <div class="modal-body">
-                        <h2 id="matchName"></h2>
-                        <img id="matchImg" src="" alt="">
+                        <h2 id="nameMatch"></h2>
+                        <img id="imageMatch" src="" alt="">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -206,8 +206,8 @@
 
         $("#submit").on("click", function(event) {
             event.preventDefault();
-            let scoreArr = [];
-            let validated = true;
+            var scoreArr = [];
+            var validated = true;
 
 
 
@@ -236,18 +236,18 @@
                 for (var i = 0; i < scoreArr.length; i++) {
                     scoreArr[i] = parseInt(scoreArr[i]);
                 }
-                var newSurvey = {
+                var survey = {
                     name: $("#name").val().trim(),
                     picture: $("#photo").val().trim(),
                     scores: scoreArr
                 };
-                console.log(newSurvey);
-                $.post("/api/friends", newSurvey)
+                console.log(survey);
+                $.post("/api/friends", survey)
                     .done(function(data) {
                         console.log(data);
-                        $("#resultsModal").modal('toggle');
-                        $("#matchName").text(data[0].name);
-                        $('#matchImg').attr("src", data[0].picture);
+                        $("#mainModal").modal('toggle');
+                        $("#nameMatch").text(data[0].name);
+                        $('#imageMatch').attr("src", data[0].picture);
                     });
             } else {
                 alert('You missed an answer!');

@@ -2,20 +2,20 @@ var express = require("express");
 var path = require("path");
 var router = express.Router();
 
-// middleware specific to this router
+//Display Time
 router.use(function timeLog(req, res, next) {
     console.log('Time: ', Date.now());
     next();
 });
 
-// define the home page route
+// Defining Home Page Route
 router.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, "/../public/home.html"));
     console.log(__dirname);
 
 });
 
-// define the survey route
+// Defining Survey Route
 router.get('/survey', function(req, res) {
     res.sendFile(path.join(__dirname, "/../public/survey.html"));
 });
