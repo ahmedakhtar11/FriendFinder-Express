@@ -4,41 +4,49 @@
 <head>
     <title>Friend-Finder Express</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://use.fontawesome.com/8c9f3166e9.js"></script>
+
+<!--GetBootStrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!--GetBootStrap JavaScript -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+/*Custom CSS Stylying Inline*/
 
 <style>
+        body{
+            background-image: url("https://i.pinimg.com/originals/b9/d2/23/b9d22317af5369d198de9f1ff99a2f73.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center; 
+        }
+        #containerBorder{
+            background-color: #000C2F;
+        }
+        #jumbotron{
+            background-color: lightblue;
+        }
+        .btn {
+            background-color: #000C2F;
+        }
 
-body{
-    background-image: url("https://i.pinimg.com/originals/b9/d2/23/b9d22317af5369d198de9f1ff99a2f73.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
-}
-
-#containerBorder{
-    background-color: #000C2F;
-}
-
-#jumbotron{
-    background-color: lightblue;
-}
+        .btn:hover {
+            background-color: #34946C;
+        }
 </style>
-
 </head>
 
+<!--HTML Body Home Page-->
 <body>
     <div class="container" id="containerBorder">
         <div class="jumbotron" id="jumbotron">
-            <h1><i class="fa fa-user-o" aria-hidden="true"></i>Friend Matcher App!</h1>
-            <p>Answer a few questions to match yourself with a Movie Star with the greatest compatibility!</p>
-            <p><a class="btn btn-primary btn-lg" href="/survey" role="button"><i class="fa fa-list" aria-hidden="true"></i> Take Survey</a></p>
+            <h1>Friend Matcher App!</h1>
+            <p><strong>-Answer a few questions to match yourself with a Movie Star with the greatest compatibility!</strong></p>
+            <p><a class="btn btn-primary btn-lg" href="/survey" role="button">Take Survey</a></p>
         </div>
-
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src=" https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 
 </html>

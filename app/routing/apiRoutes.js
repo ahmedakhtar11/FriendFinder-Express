@@ -21,14 +21,14 @@ router.post('/api/friends', function(req, res) {
         friendMatch.push({
             name: friendsList[i].name,
             picture: friendsList[i].picture,
-            totalDiff: difference
+            range: difference
         });
     }
     var maxScore = 40;
     friendMatch.map(function(obj) {
-        if (obj.totalDiff < maxScore) maxScore = obj.totalDiff;
+        if (obj.range < maxScore) maxScore = obj.range;
     });
-    friendChosen = friendMatch.filter(function(e) { return e.totalDiff == maxScore; });
+    friendChosen = friendMatch.filter(function(e) { return e.range == maxScore; });
 
     res.json(friendChosen);
     friendsList.push(survey);
