@@ -2,20 +2,37 @@
 <html lang="en">
 
 <head>
-    <title>Friend Finder</title>
+    <title>Friend-Finder Express</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://use.fontawesome.com/8c9f3166e9.js"></script>
 
+<style>
+
+body{
+    background-image: url("https://i.pinimg.com/originals/b9/d2/23/b9d22317af5369d198de9f1ff99a2f73.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+
+#containerBorder{
+    background-color: #000C2F;
+}
+
+#jumbotron{
+    background-color: lightblue;
+}
+</style>
 
 </head>
 
 <body>
-    <div class="container">
-        <div class="jumbotron">
+    <div class="container" id="containerBorder">
+        <div class="jumbotron" id="jumbotron">
             <h1><i class="fa fa-user-o" aria-hidden="true"></i>Friend Matcher App!</h1>
-            <p>Answer a few questions to find the friend with the greatest compatibility!</p>
+            <p>Answer a few questions to match yourself with a Movie Star with the greatest compatibility!</p>
             <p><a class="btn btn-primary btn-lg" href="/survey" role="button"><i class="fa fa-list" aria-hidden="true"></i> Take Survey</a></p>
         </div>
 

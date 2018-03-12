@@ -13,15 +13,15 @@ router.post('/api/friends', function(req, res) {
     var friendChosen;
     var friendMatch = [];
     for (var i = 0; i < friendsList.length; i++) {
-        var totalDifference = 0;
+        var difference = 0;
         for (var k = 0; k < 10; k++) {
             var scoreDiff = Math.abs(friendsList[i].scores[k] - survey.scores[k]);
-            totalDifference += scoreDiff;
+            difference += scoreDiff;
         }
         friendMatch.push({
             name: friendsList[i].name,
             picture: friendsList[i].picture,
-            totalDiff: totalDifference
+            totalDiff: difference
         });
     }
     var maxScore = 40;
