@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+    <script src=" https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
-
         label {
             display: block;
         }
@@ -38,7 +40,7 @@
 
         <div class="form-group">
             <h3><strong>Question# 1</strong></h3>
-            <label class="control-label" for="q1">You realize that more money, means more problems?</label>
+            <label class="control-label" for="q1">You beleive that more money, means more problems?</label>
             <select data-placeholder="" class="chosen-select" id="q1">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -197,9 +199,7 @@
             </div>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
-    <script src=" https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <script>
         $(".chosen-select").chosen();
 
@@ -207,8 +207,6 @@
             event.preventDefault();
             var scoreArr = [];
             var validated = true;
-
-
 
             $('.form-control').each(function() {
                 if ($(this).val() === '') {
@@ -251,9 +249,6 @@
             } else {
                 alert('You missed an answer!');
             }
-
-
-
         });
     </script>
 </body>

@@ -3,11 +3,6 @@ var path = require("path");
 var router = express.Router();
 var friendsList = require('../data/friends.js');
 
-router.use(function timeLog(req, res, next) {
-    console.log('Time: ', Date.now());
-    next();
-});
-
 router.post('/api/friends', function(req, res) {
     var survey = req.body;
     var friendChosen;
@@ -15,8 +10,8 @@ router.post('/api/friends', function(req, res) {
     for (var i = 0; i < friendsList.length; i++) {
         var difference = 0;
         for (var k = 0; k < 10; k++) {
-            var scoreDiff = Math.abs(friendsList[i].scores[k] - survey.scores[k]);
-            difference += scoreDiff;
+            var scoreRange = Math.abs(friendsList[i].scores[k] - survey.scores[k]);
+            difference += scoreRange;
         }
         friendMatch.push({
             name: friendsList[i].name,
@@ -24,6 +19,7 @@ router.post('/api/friends', function(req, res) {
             range: difference
         });
     }
+    
     var maxScore = 40;
     friendMatch.map(function(obj) {
         if (obj.range < maxScore) maxScore = obj.range;
